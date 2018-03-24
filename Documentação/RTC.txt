@@ -1,0 +1,41 @@
+Excelente módulo para controle de tempo, o módulo pode ser ligado diretamente ao Arduino, sem a necessidade de resistores extras, permite a leitura e gravação de data e hora.
+
+Informações:
+http://lusorobotica.com/index.php/topic,681.0.html 
+http://learn.adafruit.com/ds1307-real-time-clock-breakout-board-kit
+
+
+Código de Exemplo:
+/*
+Pinos no Modulo DS1307:
+[DS1307] <--> [Arduino]
+5V <--> 5V
+GND <--> GND 
+SQW <--> (Sem Conexao)
+SCL <--> Analog Input 5
+SDA <--> Analog Input 4
+*/
+
+#include < string.h >
+#include < Wire.h >
+#include < DS1307.h >
+
+char dateTime[20];
+int RTCValues[7];
+
+void setup() {
+Serial.begin(9600);
+Serial.println("Lendo informacoes do RTC...");
+DS1307.begin();
+}
+
+void loop() {
+sprintf(dateTime, "20%02d-%02d-%02d %02d:%02d:%02d", RTCValues[0], RTCValues[1], RTCValues[2], RTCValues[4], RTCValues[5], RTCValues[6]);
+Serial.print(dateTime);
+Serial.print(" - dia da semana: ");
+Serial.print(fromNumberToWeekDay(RTCValues[3], 2)); //1=EN; 2=PT;
+Serial.print(" - Mes: ");
+Serial.println(fromNumberToMonth(RTCValues[1], 2)); //1=EN; 2=PT;
+
+delay(1000);
+}

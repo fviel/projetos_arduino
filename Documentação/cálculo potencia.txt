@@ -1,0 +1,55 @@
+Notação utilizada para a resposta: 
+
+E --> energia consumida em KWh (Kilo watts hora). Essa é a unidade de energia utilizada nas contas de energia doméstica. 
+
+P --> potência do aparelho elétrico em W (watts). Essa é a unidade de potência no sistema internacional de unidades. 
+
+I --> corrente elétrica em A (Ampères). Essa é a unidade de corrente elétrica no sistema internacional de unidades. 
+
+T --> tempo de funcionamento do aparelho elétrico em h (horas) 
+
+U --> tensão elétrica; voltagem; ou ddp (diferença de potencial elétrico) medida em V (Volts). A maioria das residências utilizam 110 V , ou 220 V. (Valores aproximados) 
+
+Agora que sabemos a notação, vamos responder: 
+
+Para saber a potência do aparelho elétrico em W (watts) é necessário conhecer a Tensão elétrica (U) e a corrente elétrica (I). Deve-se usar a equação: 
+
+P = U . I 
+
+Exemplo: U = 110V ; I = 2,0 A 
+P = 110 . 2,0 --> P = 220 W 
+
+Para saber o valor da corrente elétrica utilizada por algum aparelho elétrico conhecendo a potência em W (watts) e a tensão em V(vots) deve-se usar a mesma equação anterior: 
+
+P = U . I --> isolando a corrente elétrica temos: 
+
+I = P/U (corrente é igual a potência dividida pela tensão) 
+
+Exemplo: U = 110V ; P = 1100W 
+
+I = 1100/110 --> I = 10A (dez ampères) 
+
+Se você quiser calcular o consumo de energia de um aparelho em KWh (kilo watts hora), igual ao da sua conta de energia. Você de transformar a potência do aparelho de W (watts) para KW (kilo watts). Basta dividir a potência em W por 1000. Veja o exemplo: 
+P = 200W --> P = 200/1000 --> P = 0,2 KW 
+
+Agora que você conhece a potência em KW, pode calcular o consumo de energia em KWh utilizando a equação: 
+
+E = P . T (P --> potência em KW; T --> tempo em horas) 
+
+Exemplo: Você quer saber quanta energia sua televisão consome em 30 dias. Suponha que a televisão tenha uma potência de 100W e que ela fique ligada 4 horas por dia. 
+Resolução: 
+
+Transformando a potência da televisão para KW: 
+P = 100W --> P = 100/1000 --> P = 0,1 KW 
+
+Calculando o tempo em que a televisão fica ligada nos 30 dias: 
+4 horas por dia, em 30 dias temos 
+T = 4 . 30 --> T = 120h 
+
+Calculando a energia consumida: 
+
+E = P . T --> E = 0,1 . 120 --> E = 12 KWh 
+
+Supondo que cada KWh custe R$ 0,60. (o valor do KWh pode ser obtido na conta de energia elétrica) Qual foi o custo mensal de energia elétrica dessa televisão? 
+Respondendo: 
+O custo mensal será = 12 . 0,60 = R$ 7,20

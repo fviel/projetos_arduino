@@ -1,0 +1,46 @@
+Módulo Bluetooth Serial HC-05 Master e Slave
+   Faça comunicação entre o arduino e outros dispositivos bluetooth por meio de transferência de dados Serial TTL. Com esse módulo é possível controlar servos, motores, escrever textos em uma tela lcd e muito mais. 
+   Esse módulo pode funcionar como Master ou Slave, no Modo Master ele pode se conectar com outros módulos bluetooth, possibilitando assim a comunicação entre Arduinos. 
+
+Instruções para Configuração via comando AT:
+http://www.tuxti.com.br/wiki/index.php/Arduino_-_Bluetooth_HC-05 
+
+Código de Exemplo:
+// Pino VCC: Na alimentação 3.3V
+// Pino GND: GND
+// Pino TXD: Digital 0
+// Pino RXD: Digital 1
+char val; // Variável que recebe os caracteres enviados para o Bluetooth
+int ledpin = 13; // o pino 13 corresponde ao LED que já existe no Arduino Uno
+
+void setup() {
+  pinMode(ledpin, OUTPUT);
+  Serial.begin(9600); // Inicia a comunicação Serial a 9600bps
+}
+
+void loop() {
+  // Checa se tem dados para serem lidos
+  if( Serial.available() ){
+    val = Serial.read(); // Faz a leitura e registra o caractere em 'val'
+  }
+  // if 'H' was received
+  if( val == 'H' ) {
+    digitalWrite(ledpin, HIGH); // Liga o LED 13
+  } else { 
+    digitalWrite(ledpin, LOW); // Desliga o LED
+  }
+  delay(200); // espera 200 ms para próxima leitura
+}
+Características:
+Bluetooth v2.0+EDR
+Modo de operação Master ou Slave
+Frequência: 2.4GHz ISM band
+Modulação: GFSK(Gaussian Frequency Shift Keying)
+Potência: =4dBm, Class 2
+Sensibilidade: =-84dBm at 0.1% BER
+Velocidades: Assíncrona 2.1Mbps(Max) / 160 kbps, Síncrona: 1Mbps/1Mbps
+Segurança: Autenticação e Encriptação
+Perfil: Bluetooth serial port
+Alimentação: +3.3VDC 50mA
+Temperatura Ambiente: -20 ~ +75 C
+Dimensões: 28mm x 15 mm x 2.35mm

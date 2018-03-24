@@ -1,0 +1,7 @@
+Cálculo consumo de energia
+
+Multiplique W (aparelho) x h (funcionamento por dia) x 30 dias (mês). Divida o resultado da operação em Watts por 1000 para obter o valor em kWt. Feito isso, multiplique os kWt pela tarifa local para saber o valor mensal em dinheiro.
+Exemplo:
+5W x 16h = 90W/dia
+90W/dia x 30 dias = 2700W : 1000 = 2.7kWh x 0,40 (tarifa local) = R$10,8.
+Estes resultados não incluem tributos nem outros custos adicionais à conta, como Imposto sobre Circulação de Mercadorias e Serviços (ICMS) e Taxa de Iluminação Pública.

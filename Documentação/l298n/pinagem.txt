@@ -1,0 +1,22 @@
+L298N
+Características:
+- Chip L298N
+- Módulo de 2 Canais
+- Tensão de Operação: 7~35v
+- Corrente de Operação máxima: 2A por canal
+- Tensão lógica 5A
+- Corrente lógica 0~36mA
+- Limites de Temperatura: -20 a 135°C
+- Potência Máxima: 25W
+- Dimensões: 43mm x 43mm x 27mm
+- Peso: 30g
+
+Nota:
+
+Output A e B: referem-se a conexão do Motor 1 e 2.
+- +5v: Este módulo possui integrado um regulador de tensão 5v que quando o drive opera entre 7-35v este regulador pode ser acionado pelo jumper “5v enable”. Logo não alimente este pino com +5v mas deixe para uso externo se operando nestas condições.
+- Input: Este tem 4 entradas e são elas:
+> In 1: Este é um sinal PWM do controlador, ele diz quão rápido o motor 1 deve funcionar. No exemplo abaixo este valor pode ser entre 0 e 255, sendo 0 parado e 255 velocidade máxima.
+> In 2: Simples sinal digital que informa o sentido da rotação do motor 1, sendo que 0 significa reverso e 1 frente.
+> In 3: PWM para a velocidade do motor 2.
+> In 4: Sinal digital para direção do motor 2.

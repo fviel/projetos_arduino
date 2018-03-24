@@ -1,0 +1,56 @@
+Tela LCD Nokia 5110 matriz de 84 x 48 pixels
+O módulo LDC 5110 Nokia possui pode exibir texto ou imagens em uma matriz de 84x48 pixels, com um baixo consumo de energia, e um custo baixo. Originalmente destinada a celulares, agora está acoplada a uma placa PCB e pode ser facilmente utilizada em projetos com Arduino.
+Esse dispositivo possui muita documentação na Internet e uma biblioteca de fácil uso, confira nos links abaixo a biblioteca e um link de tutorial, onde tem um link para converter imagens para um formato compatível com esse LCD.
+Ela utiliza o controlador PCD8544, que é o mesmo utilizado no Nokia 3310, essa controladora possui um baixo consumo de energia, com desing para exibição de gráficos de 48 linhas por 84 colunas. Todas as funções necessárias para exibição do vídeo estão inclusas em um chip único, incluindo a alimentação e tensões de polarização, o que resulta na necessidade mínima de componentes externos e um baixo consumo de energia. 
+
+IMPORTANTE: Utilize a alimentação de 3V para evitar danos ao módulo. 
+
+Biblioteca:
+www.henningkarlsen.com/electronics/library.php?id=44 
+
+Exemplo de Uso:
+www.tuxti.com.br/wiki/index.php/Arduino_-_Tela_LCD_Nokia_5110 
+
+Código Exemplo:
+// LCD5110_ViewFont (C)2013 Henning Karlsen
+// web: http://www.henningkarlsen.com/electronics
+#include 
+
+LCD5110 myGLCD(8,9,10,11,12); // Definicao dos Pinos
+extern uint8_t SmallFont[];
+
+void setup()
+{
+  myGLCD.InitLCD();
+  myGLCD.setFont(SmallFont);
+}
+
+void loop()
+{
+  myGLCD.clrScr();
+  myGLCD.print("TITULO", CENTER, 0);
+  myGLCD.print("Linha 1", LEFT, 8);
+  myGLCD.print("Linha 2", LEFT, 16);
+  myGLCD.print("Linha 3", LEFT, 24);
+  myGLCD.print("Linha 4", LEFT, 32);
+  myGLCD.print("12345678901234", LEFT, 40);
+  delay (5000);
+
+  for (int i=0; i<2; i="" br=""> {
+    myGLCD.invert(true);
+    delay(500);
+    myGLCD.invert(false);
+    delay(500);
+  }
+}
+Características:
+Letras Pretas no Fundo Branco
+Chip único diver/controlador LCD
+48 linhas, 84 colunas
+Video 48 × 84 bits
+Interface Serial 4.0 Mbits/s
+Voltagem de alimentação entre VDD para VSS, 2.7V para 3.3V
+Valores Limites: Alimentação VDD: 7V
+Valores Limites: Todas entradas de alimentação: VDD + 0.5V
+Baixo consumo de Energia
+Dimensões: 4,5cm x 4,5cm
