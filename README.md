@@ -1,2 +1,2 @@
 # projetos_arduino
-Meu projetos aduino
+Projetos arduino entre 2012 e 2017, incluindo seguidor de linha, displays, etc...
